@@ -59,6 +59,9 @@ ul {
   padding-left: 30px;
 }
 
+a {
+  color: black;
+}
 .section1 {
   width: var(--sec1-width);
 }
