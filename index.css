@@ -84,9 +84,6 @@ ul {
 
 .email {
   text-decoration: underline;
-}
-
-.email:hover {
   cursor: pointer;
 }
 
