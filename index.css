@@ -7,25 +7,23 @@
 }
 
 :root {
-  --sec1-width: 690px;
-  --sec2-width: 230px;
-  --sec1-sec2-gap: 0;
+  --right-column-width: 230px;
+  --left-column-width: calc(var(--right-column-width) * 3);
+  --both-column-width: calc(var(--right-column-width) * 4);
   --h1-font-weight: 600;
   --h2-font-weight: 600;
-  line-height: 150%;
+  --b-font-weight: 600;
   font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 150%;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin: auto;
+  max-width: var(--both-column-width);
 }
 
-header,
-main {
-  width: var(--sec1-width) + var(--sec2-width);
-  gap: var(--sec1-sec2-gap);
+header {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
@@ -33,82 +31,85 @@ main {
 }
 
 main {
+  display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
-  border-bottom: none;
+}
+
+section.left-column {
+  width: var(--left-column-width);
+}
+
+section.right-column {
+  width: var(--right-column-width);
 }
 
 article {
   padding: 10px;
 }
 
+article.tech {
+  background-color: lightskyblue;
+}
+
+div.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+div.align-right {
+  text-align: right;
+}
+
+div.artificial-space {
+  /* display: block; */
+  height: 10px;
+}
+
 h1 {
   font-size: 3rem;
   font-weight: var(--h1-font-weight);
-  padding-block: 12px;
+  margin-block: 12px;
 }
 
 h2 {
   font-weight: var(--h2-font-weight);
+  margin-bottom: 5px;
 }
 
-/* span {  
-} */
+b {
+  font-weight: var(--b-font-weight);
+}
+
+p.email {
+  text-decoration: underline;
+  cursor: pointer;
+}
 
 ol,
 ul {
-  padding-left: 30px;
+  margin-left: 30px;
+}
+
+li.spaced-list {
+  margin-top: 5px;
 }
 
 a {
   color: black;
 }
-.section1 {
-  width: var(--sec1-width);
+
+br {
+  line-height: 50%;
 }
 
-.section2 {
-  width: var(--sec2-width);
-}
-
-.tech {
-  background-color: lightskyblue;
-}
-
-.flex-space-between {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.align-right {
-  text-align: right;
-}
-
-.email {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-@media (max-width: 700px) {
-  header,
-  main {
-    width: 500px;
+@media (max-width: 690px) {
+  div.flex-space-between {
+    display: block;
   }
 
-  .flex-space-between {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .align-right {
+  div.align-right {
     text-align: left;
-  }
-}
-
-@media (max-width: 500px) {
-  header,
-  main {
-    width: 350px;
   }
 }

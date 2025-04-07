@@ -7,20 +7,25 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
+    <!-- <div id="header-main-container"> -->
     <header>
-      <article class="section1">
-        <h1>Asher Kim</h1>
-        <p>Full-Stack (Or Back End) Web Developer, Entry-Level</p>
-      </article>
+      <section class="left-column">
+        <article>
+          <h1>Asher Kim</h1>
+          <p>Full-Stack (Or Back End) Web Developer, Entry-Level</p>
+        </article>
+      </section>
 
-      <article class="section2">
-        <p class="email">asherkim815@gmail.com</p>
-        <p>Seoul, South Korea</p>
-      </article>
+      <section class="right-column">
+        <article>
+          <p class="email">asherkim815@gmail.com</p>
+          <p>Seoul, South Korea</p>
+        </article>
+      </section>
     </header>
 
     <main>
-      <section class="section1">
+      <section class="left-column">
         <!-- Summary -->
         <article>
           <h2>Summary</h2>
@@ -28,8 +33,8 @@
             I am confident I will be valuable to your company for three reasons:
           </p>
           <ol>
-            <li>
-              <span>I have history of great teamwork</span>
+            <li class="spaced-list">
+              I have history of great teamwork
               <p>
                 All teams I belonged to achieved great results. My team won new
                 employee product idea competition at CJ CheilJedang, collegiate
@@ -40,16 +45,16 @@
                 success.
               </p>
             </li>
-            <li>
-              <span>I tailor my work to customer and employer</span>
+            <li class="spaced-list">
+              I tailor my work to customer and employer
               <p>
                 I ran e-commerce business for two years, and though I failed, I
                 experienced being business owner. I will work from customer's
                 and employer's perspectives, not mine.
               </p>
             </li>
-            <li>
-              <span>I will grow quickly as developer</span>
+            <li class="spaced-list">
+              I will grow quickly as developer
               <p>
                 It's likely I will make performing developer for two reasons.
                 First, I fit programming. I enjoy spending time thinking and
@@ -68,7 +73,7 @@
           <h2>Experience</h2>
           <div class="flex-space-between">
             <div>
-              <p><span>Overseas Sales Representative</span></p>
+              <p><b>Overseas Sales Representative</b></p>
               <p>
                 North America Team, Overseas Sales Department, CJ CheilJedang
               </p>
@@ -79,17 +84,17 @@
             </div>
           </div>
           <ul>
-            <li>
+            <li class="spaced-list">
               Managed key food products' export to North America, and helped NA
               team exceed goal by 5-20% every quarter
             </li>
-            <li>
+            <li class="spaced-list">
               Elicited good cooperation from involved departments (Marketing,
               Packaging, Quality, SCM, Production, and more) by always
               communicating with humility, rare behavior in company's
               competitive culture
             </li>
-            <li>
+            <li class="spaced-list">
               Increased involved departments' performances by voluntarily
               devising and doing needed work. Organized weekly spreadsheets
               containing key products' orders, inventory, and production dates.
@@ -101,11 +106,11 @@
             </li>
           </ul>
 
-          <br />
+          <div class="artificial-space"></div>
 
           <div class="flex-space-between">
             <div>
-              <p><span>Military Interpreter</span></p>
+              <p><b>Military Interpreter</b></p>
               <p>Republic of Korea Army</p>
             </div>
             <div class="align-right">
@@ -114,7 +119,7 @@
             </div>
           </div>
           <ul>
-            <li>
+            <li class="spaced-list">
               Contributed to successful ROK-US joint exercise as senior
               translator
             </li>
@@ -151,7 +156,7 @@
         </article>
       </section>
 
-      <section class="section2">
+      <section class="right-column">
         <!-- Portfolio -->
         <article class="tech">
           <h2>Portfolio</h2>
@@ -176,7 +181,7 @@
             <li>PostgreSQL</li>
           </ul>
 
-          <br />
+          <div class="artificial-space"></div>
 
           <p>Languages:</p>
           <ul>
@@ -208,15 +213,16 @@
         <!-- Awards -->
         <article>
           <h2>Awards</h2>
-          <p>1st Place, New Employee Product Idea Competition</p>
+          <p>New Employee Product Idea Competition</p>
           <ul>
+            <li>1st Place</li>
             <li>Team Leader</li>
             <li>CJ CheilJedang, 2017</li>
           </ul>
         </article>
       </section>
     </main>
-
+    <!-- </div> -->
     <script>
       document.querySelector('.email').addEventListener('click', () => {
         navigator.clipboard.writeText('asherkim815@gmail.com');
