@@ -112,3 +112,10 @@ br {
     text-align: left;
   }
 }
+
+@media print {
+  :root {
+    --right-column-width: 180px;
+    font-size: 12px;
+  }
+}
